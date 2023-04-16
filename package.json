@@ -38,7 +38,7 @@
   },
   "build": {
     "appId": "fr.maelgangloff.scolengo.token",
-    "productName": "Skokengo Token",
+    "productName": "Scolengo Token",
     "copyright": "Copyright © 2023 Maël Gangloff",
     "win": {
       "target": "nsis"
