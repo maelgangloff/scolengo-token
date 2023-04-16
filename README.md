@@ -5,6 +5,8 @@ Cet outil permet d'obtenir des jetons d'authentification pour se connecter à l'
 
 
 ## Lancer le projet depuis les sources
+Prérequis: Node.Js
+
 1. Cloner le dépôt
 ```shell
 git clone https://github.com/maelgangloff/scolengo-token
