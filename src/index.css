@@ -5,6 +5,15 @@ body {
   padding: 2rem;
 }
 
+footer {
+  text-align:center;
+  padding: 5px;
+  background-color: #abbaba;
+  color: #000;
+  position: absolute;
+  bottom: 0;
+}
+
 pre {
   overflow-x: auto;
   white-space: pre-wrap;

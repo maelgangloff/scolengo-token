@@ -19,3 +19,6 @@ npm install # yarn install
 ```shell
 npx electron .
 ```
+
+---
+Crédit icon: Designed by brgfx / Freepik
