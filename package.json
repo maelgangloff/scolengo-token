@@ -1,7 +1,7 @@
 {
   "name": "scolengo-token",
   "description": "Petite application Electron pour obtenir des jetons Skolengo API",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "repository": {
     "type": "git",
@@ -39,12 +39,13 @@
     "appId": "fr.maelgangloff.scolengo.token",
     "productName": "Scolengo Token",
     "copyright": "Copyright © 2023 Maël Gangloff <contact@maelgangloff.fr>",
+    "icon": "src/icon.png",
     "win": {
-      "target": "nsis"
+      "target": "portable"
     },
     "linux": {
       "target": "AppImage",
-      "category": "Utility"
+      "category": "Development"
     }
   }
 }
