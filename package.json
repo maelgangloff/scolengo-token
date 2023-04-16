@@ -33,8 +33,7 @@
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0",
-    "eslint-plugin-promise": "^6.0.0",
-    "openid-client": "^5.4.0"
+    "eslint-plugin-promise": "^6.0.0"
   },
   "build": {
     "appId": "fr.maelgangloff.scolengo.token",
