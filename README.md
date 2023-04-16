@@ -1,5 +1,5 @@
 # scolengo-token
-Cet outil permet d'obtenir des jetons d'authentification pour se connecter à l'API de Skolengo.  
+Pour utiliser le wrapper [scolengo-api](https://github.com/maelgangloff/scolengo-api), il est nécessaire de posséder des jetons d'authentification OpenID Connect. Cette application permet de les obtenir auprès du CAS.  
 
 🚨 ATTENTION: Ne communiquez jamais vos jetons à un tiers. Ils vous sont strictement personnels. Si vous pensez que vos jetons ont été dérobés, révoquez-les immédiatement.
 
