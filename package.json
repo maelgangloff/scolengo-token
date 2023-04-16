@@ -1,0 +1,51 @@
+{
+  "name": "scolengo-token",
+  "description": "Application Electron pour obtenir des jetons Skolengo API",
+  "version": "1.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maelgangloff/scolengo-token"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint src/"
+  },
+  "keywords": [
+    "Skolengo",
+    "API",
+    "token",
+    "OpenID Connect",
+    "OAuth 2.0"
+  ],
+  "author": {
+    "name": "Maël Gangloff",
+    "email": "contact@maelgangloff.fr"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "scolengo-api": "^0.0.5"
+  },
+  "devDependencies": {
+    "electron": "24.1.2",
+    "electron-builder": "^23.6.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "openid-client": "^5.4.0"
+  },
+  "build": {
+    "appId": "fr.maelgangloff.scolengo.token",
+    "productName": "Skokengo Token",
+    "copyright": "Copyright © 2023 Maël Gangloff",
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage",
+      "category": "Utility"
+    }
+  }
+}
