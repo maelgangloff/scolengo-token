@@ -26,15 +26,15 @@ const createWindow = () => {
 
 ipcMain.on('school-name', async (event, schoolName) => {
   try {
-    const schools = await Skolengo.searchSchool(schoolName)
-    if (!schools.data.length) {
+    const schools = await Skolengo.searchSchool({ text: schoolName })
+    if (!schools.length) {
       dialog.showErrorBox('Établissement introuvable', "Nous avons cherché partout, mais nous n'avons pas trouvé cet établissement...")
       return mainWindow.reload()
     }
-    school = schools.data[0]
+    school = schools[0]
     dialog.showMessageBox(mainWindow, {
       title: 'Établissement sélectionné',
-      message: `Vous avez sélectionné cet établissement : ${school.attributes.name} (${school.attributes.emsCode})`
+      message: `Vous avez sélectionné cet établissement : ${school.name} (${school.emsCode})`
     })
     oidClient = await Skolengo.getOIDClient(school)
     const authURL = oidClient.authorizationUrl()
