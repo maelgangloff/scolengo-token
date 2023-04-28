@@ -1,7 +1,7 @@
 {
   "name": "scolengo-token",
   "description": "Application Electron pour obtenir des jetons Skolengo API",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": true,
   "repository": {
     "type": "git",
