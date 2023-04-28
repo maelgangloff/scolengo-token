@@ -32,7 +32,11 @@ ipcMain.on('school-search', async (event, schoolName) => {
       dialog.showErrorBox('Établissement introuvable', "Nous avons cherché partout, mais nous n'avons pas trouvé cet établissement...")
       return mainWindow.reload()
     }
-    mainWindow.webContents.send('school-list', schools)
+    if (schools.length === 1) {
+      oidClient = await Skolengo.getOIDClient(schools[0])
+      const authURL = oidClient.authorizationUrl()
+      mainWindow.loadURL(authURL)
+    } else mainWindow.webContents.send('school-list', schools)
   } catch (e) {
     dialog.showErrorBox('Erreur', 'Une erreur est survenue, veuillez réessayer...')
     return mainWindow.reload()
