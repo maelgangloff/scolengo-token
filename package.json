@@ -1,7 +1,7 @@
 {
   "name": "scolengo-token",
   "description": "Application Electron pour obtenir des jetons Skolengo API",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "private": true,
   "repository": {
     "type": "git",
@@ -11,7 +11,7 @@
   "scripts": {
     "lint": "eslint src/",
     "start": "electron .",
-    "build": "electron-builder build --linux --win"
+    "prod": "electron-builder build --linux --win"
   },
   "keywords": [
     "Skolengo",
