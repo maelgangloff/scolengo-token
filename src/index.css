@@ -40,6 +40,10 @@ pre {
     word-wrap: break-word;
 }
 
+.scroll-schools {
+    overflow-y: scroll;
+}
+
 ul.schools {
 	list-style-type: none;
 }
