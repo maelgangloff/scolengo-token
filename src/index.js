@@ -8,7 +8,7 @@ const CAS_CALLBACK = 'skoapp-prod://sign-in-callback'
 let mainWindow = null
 let oidClient
 /** @type {import('scolengo-api/types/models/School').School} */
-let school
+let selectedSchool
 
 const createWindow = () => {
   mainWindow = new BrowserWindow({
@@ -24,18 +24,23 @@ const createWindow = () => {
   return mainWindow
 }
 
-ipcMain.on('school-name', async (event, schoolName) => {
+ipcMain.on('school-search', async (event, schoolName) => {
   try {
-    const schools = await Skolengo.searchSchool({ text: schoolName })
+    const schools = await Skolengo.searchSchool({ text: schoolName }, 100)
     if (!schools.length) {
       dialog.showErrorBox('Établissement introuvable', "Nous avons cherché partout, mais nous n'avons pas trouvé cet établissement...")
       return mainWindow.reload()
     }
-    school = schools[0]
-    dialog.showMessageBox(mainWindow, {
-      title: 'Établissement sélectionné',
-      message: `Vous avez sélectionné cet établissement : ${school.name} (${school.emsCode})`
-    })
+    mainWindow.webContents.send('school-list', schools)
+  } catch (e) {
+    dialog.showErrorBox('Erreur', 'Une erreur est survenue, veuillez réessayer...')
+    return mainWindow.reload()
+  }
+})
+
+ipcMain.on('school-auth', async (event, school) => {
+  try {
+    selectedSchool = school
     oidClient = await Skolengo.getOIDClient(school)
     const authURL = oidClient.authorizationUrl()
     mainWindow.loadURL(authURL)
@@ -62,7 +67,7 @@ else {
       try {
         const tokenSet = await oidClient.callback(CAS_CALLBACK, oidClient.callbackParams(url))
         await window.loadFile(path.join(__dirname, 'success.html'))
-        const authData = { tokenSet, school }
+        const authData = { tokenSet, school: selectedSchool }
         window.webContents.send('send-token', authData)
       } catch (e) {
         dialog.showErrorBox('Erreur', "L'authentification a échoué, veuillez réessayer...")

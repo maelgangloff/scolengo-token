@@ -9,13 +9,17 @@
     <h1>💖 Félicitations !</h1>
     <p><b>🚨 ATTENTION: Ne communiquez jamais vos jetons à un tiers. Ils vous sont strictement personnels. Si vous pensez que vos jetons ont été dérobés, révoquez-les immédiatement.</b></p>
     <p>Vous pouvez utiliser ces informations d'authentification avec la librairie <a href="https://github.com/maelgangloff/scolengo-api">scolengo-api</a>.</p>
+    <a class="dllink">📁 Télecharger le fichier de configuration</a>
     <pre>
       <code id="auth"></code>
     </pre>
-    <script>
+	<script>
       const auth = document.getElementById('auth')
+	  const dllink = document.querySelector('.dllink');
       window.electronAPI.sendToken((event, token) => {
         auth.innerHTML = JSON.stringify(token, null, 2)
+		dllink.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(token, null, 2)));
+		dllink.setAttribute('download', "config.json");
       })
     </script>
   </body>

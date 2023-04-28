@@ -10,7 +10,8 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint src/",
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder build --linux --win"
   },
   "keywords": [
     "Skolengo",
@@ -39,7 +40,6 @@
   "build": {
     "appId": "fr.maelgangloff.scolengo.token",
     "productName": "Scolengo Token",
-    "copyright": "Copyright © 2023 Maël Gangloff <contact@maelgangloff.fr>",
     "icon": "src/icon.png",
     "win": {
       "target": "portable"
