@@ -10,7 +10,8 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint src/",
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder build --linux --win"
   },
   "keywords": [
     "Skolengo",
@@ -23,6 +24,12 @@
     "name": "Maël Gangloff",
     "email": "contact@maelgangloff.fr"
   },
+  "contributors": [
+    {
+      "name": "NonozgYtb",
+      "email": "nonozg.ytb@gmail.com"
+    }
+  ],
   "license": "ISC",
   "dependencies": {
     "scolengo-api": "^1.0.0"
@@ -39,7 +46,7 @@
   "build": {
     "appId": "fr.maelgangloff.scolengo.token",
     "productName": "Scolengo Token",
-    "copyright": "Copyright © 2023 Maël Gangloff <contact@maelgangloff.fr>",
+    "copyright": "Copyright © 2023 Maël Gangloff <contact@maelgangloff.fr> & NonozgYtb <nonozg.ytb@gmail.com>",
     "icon": "src/icon.png",
     "win": {
       "target": "portable"
