@@ -8,17 +8,18 @@ form.addEventListener('submit', (e) => {
 })
 
 window.addEventListener('load', () => {
-  window.electronAPI.onSchoolList((_, schools) =>
+  window.electronAPI.onSchoolList((_, schools) => {
+    schoolsElem.innerHTML = ''
     schools.forEach((school) => {
       const schooHTML = `<b class="school-name">${
-                    school.name
-                }</b><span class="school-ems">(${
-                    school.emsCode
-                })</span>-<i class="school-city">${school.city
-                    .replace(/CEDEX ([0-9]+)/, '')
-                    .trim()} ${
-                    school.zipCode
-                }</i><button class="school-select">Choisir</button>`
+                      school.name
+                  }</b><span class="school-ems">(${
+                      school.emsCode
+                  })</span>-<i class="school-city">${school.city
+                      .replace(/CEDEX ([0-9]+)/, '')
+                      .trim()} ${
+                      school.zipCode
+                  }</i><button class="school-select">Choisir</button>`
       const li = document.createElement('li')
       li.innerHTML = schooHTML
       li.querySelector('.school-select').addEventListener(
@@ -29,5 +30,5 @@ window.addEventListener('load', () => {
       )
       schoolsElem.appendChild(li)
     })
-  )
+  })
 })
