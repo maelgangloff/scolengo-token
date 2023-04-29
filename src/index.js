@@ -33,7 +33,8 @@ ipcMain.on('school-search', async (event, schoolName) => {
       return mainWindow.reload()
     }
     if (schools.length === 1) {
-      oidClient = await Skolengo.getOIDClient(schools[0])
+      selectedSchool = schools[0]
+      oidClient = await Skolengo.getOIDClient(selectedSchool)
       const authURL = oidClient.authorizationUrl()
       mainWindow.loadURL(authURL)
     } else mainWindow.webContents.send('school-list', schools)
