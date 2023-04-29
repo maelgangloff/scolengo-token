@@ -1,15 +1,4 @@
-# scolengo-token
-Pour utiliser le wrapper [scolengo-api](https://github.com/maelgangloff/scolengo-api), il est nécessaire de posséder des jetons d'authentification OpenID Connect. Cette application permet de les obtenir auprès du CAS.  
-
-🚨 ATTENTION: Ne communiquez jamais vos jetons à un tiers. Ils vous sont strictement personnels. Si vous pensez que vos jetons ont été dérobés, révoquez-les immédiatement.  
-
-Des exécutables sont disponibles dans la dernière [Release](https://github.com/maelgangloff/scolengo-token/releases/latest).
-
-| Rechercher un établissement | Jetons d'authentification |
-|:---------------------------:|---------------------------|
-|    ![](docs/homepage.png)   | ![](docs/success.png)     |
-
-## Remarques importantes
+# Politique de sécurité
  - Il est clairement mentionné que cette librairie est n'est pas officielle.
  - Ce module n'est pas une contrefaçon car il n'existe pas de module similaire édité officiellement.
  - Les utilisateurs ne peuvent accéder qu'à leurs propres données. Ils sont soumis au même processus d'authentification que celui implémenté dans l'application.
@@ -20,21 +9,7 @@ Des exécutables sont disponibles dans la dernière [Release](https://github.com
  - Eu égard l'ensemble de ces remarques, les contributeurs et *a fortiori* l'auteur du projet ne peuvent être tenus responsables de tout dommage potentiel.
 
 
-## Lancer le projet depuis les sources
-Prérequis: Node.Js
+Nous attachons une attention particulière aux données personnelles des utilisateurs finaux de la librairie. Lorsque vous utilisez cette librairie, **vous communiquez directement avec les serveurs de Skolengo** sans passer par quelconque intermédiaire.
 
-1. Cloner le dépôt
-```shell
-git clone https://github.com/maelgangloff/scolengo-token
-```
-2. Installer les dépendances
-```shell
-npm install # yarn install
-```
-3. Lancer l'application
-```shell
-npx electron .
-```
-
----
-Crédit icon: Designed by brgfx / Freepik
+# Signaler une vulnérabilité
+Si vous avez découvert une vulnérabilité, dans la mesure où **nous n'avons aucun contrôle sur le fonctionnement de l'API**, nous vous conseillons d'envoyer votre signalement à l'ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information) qui prendra contact avec la société qui gère le fonctionnement de l'API.
