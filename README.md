@@ -3,6 +3,10 @@ Pour utiliser le wrapper [scolengo-api](https://github.com/maelgangloff/scolengo
 
 🚨 ATTENTION: Ne communiquez jamais vos jetons à un tiers. Ils vous sont strictement personnels. Si vous pensez que vos jetons ont été dérobés, révoquez-les immédiatement.  
 
+![Presentation](docs/presentation.gif)
+
+🚨 ATTENTION: Ne communiquez jamais vos jetons à un tiers. Ils vous sont strictement personnels. Si vous pensez que vos jetons ont été dérobés, révoquez-les immédiatement.  
+
 Des exécutables sont disponibles dans la dernière [Release](https://github.com/maelgangloff/scolengo-token/releases/latest).
 
 | Rechercher un établissement | Jetons d'authentification |
