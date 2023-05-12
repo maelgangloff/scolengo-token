@@ -1,13 +1,12 @@
 # scolengo-token
-Pour utiliser le wrapper [scolengo-api](https://github.com/maelgangloff/scolengo-api), il est nécessaire de posséder des jetons d'authentification OpenID Connect. Cette application permet de les obtenir auprès du CAS.  
+Pour utiliser le wrapper [scolengo-api](https://github.com/maelgangloff/scolengo-api), il est nécessaire de posséder des jetons d'authentification OpenID Connect. Cette application permet de les obtenir auprès du CAS.
+
+Des exécutables sont disponibles dans la dernière [Release](https://github.com/maelgangloff/scolengo-token/releases/latest).
+
 
 🚨 ATTENTION: Ne communiquez jamais vos jetons à un tiers. Ils vous sont strictement personnels. Si vous pensez que vos jetons ont été dérobés, révoquez-les immédiatement.  
 
 ![Presentation](docs/presentation.gif)
-
-🚨 ATTENTION: Ne communiquez jamais vos jetons à un tiers. Ils vous sont strictement personnels. Si vous pensez que vos jetons ont été dérobés, révoquez-les immédiatement.  
-
-Des exécutables sont disponibles dans la dernière [Release](https://github.com/maelgangloff/scolengo-token/releases/latest).
 
 | Rechercher un établissement | Jetons d'authentification |
 |:---------------------------:|---------------------------|
