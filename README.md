@@ -12,10 +12,6 @@ Des exécutables sont disponibles dans la dernière [Release](https://github.com
 
 ![Presentation](docs/presentation.gif)
 
-| Rechercher un établissement | Jetons d'authentification |
-|:---------------------------:|---------------------------|
-|    ![](docs/homepage.png)   | ![](docs/success.png)     |
-
 ## Remarques importantes
  - Il est clairement mentionné que cette librairie est n'est pas officielle.
  - Ce module n'est pas une contrefaçon car il n'existe pas de module similaire édité officiellement.
